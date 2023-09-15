@@ -17,7 +17,7 @@ Al terminar, mostrará el importe total de la compra y cuántos productos hemos 
     public static ArrayList<Producto> listaCompra;
     public static void nuevaCompra(){
         listaCompra=new ArrayList<>();
-        String seguir="SI";
+        String seguir;
 
         do{
             listaCompra.add(new Producto(Utilidades.pedirString("Introduzca nombre del producto"),Utilidades.pedirDouble("Introduzca precio")));

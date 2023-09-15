@@ -11,7 +11,7 @@ public class Main {
     }
     private static void menu() {
         char op;
-        Menu m=new Menu("Menu Principal",new String[] {"1.-Ejercicio 1 ","2.-Ejercicio 2","3.-Ejercicio 3","4.-Ejercicio 4","5.-Ejercicio 5","6.-Ejercicio 6","0.-Sair"},"0123456",Menu.Direccion.VERTICAL);
+        Menu m=new Menu("Menu Principal",new String[] {"1.-Ejercicio 1 ","2.-Ejercicio 2","3.-Ejercicio 3","4.-Ejercicio 4","5.-Ejercicio 5","6.-Ejercicio 6","7.-Ejercicio 7","0.-Sair"},"01234567",Menu.Direccion.VERTICAL);
 
         do {
             op=m.getOption();
@@ -37,6 +37,10 @@ public class Main {
                     break;
                 case '6':
                     Ejercicio106.agenda();
+                    break;
+                case '7':
+                    Ejercicio107.generaAlumnos();
+                    Ejercicio107.notaMediaAlumno();
                     break;
 
             }

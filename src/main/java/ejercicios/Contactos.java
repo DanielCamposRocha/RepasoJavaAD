@@ -27,6 +27,6 @@ public class Contactos {
 
     @Override
     public String toString() {
-        return "Nombre= " + nombre + ", numero= " + numero ;
+        return "Nombre= " + nombre + ", numero= " + numero+"\n" ;
     }
 }

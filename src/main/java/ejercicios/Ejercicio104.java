@@ -31,13 +31,13 @@ public class Ejercicio104 {
     public final static double SUPERFICIE_PERSONA= 2;
 
     public static int aforo(){
-        int aforo=0;
-        double longuitud=0;
-        double anchura=0;
-        double superficiePiscina=0;
-        double largo=0;
-        double ancho=0;
-        double superficieParcela=0;
+        int aforo;
+        double longuitud;
+        double anchura;
+        double superficiePiscina;
+        double largo;
+        double ancho;
+        double superficieParcela;
         do {
             longuitud = Utilidades.pedirDouble("Introduzca longuitud de la piscina");
         }while(longuitud<1 | longuitud >200);
@@ -54,10 +54,10 @@ public class Ejercicio104 {
         superficieParcela=largo*ancho;
 
         if (superficiePiscina>superficieParcela){
-            aforo =(int)superficieParcela/2;
+            aforo =(int)(superficieParcela/SUPERFICIE_PERSONA);
         }
         else {
-            aforo=(int)superficiePiscina/2;
+            aforo=(int)(superficiePiscina/SUPERFICIE_PERSONA);
         }
         System.out.println("El aforo permitido es: "+aforo);
     return aforo;

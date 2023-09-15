@@ -35,23 +35,27 @@ public class Ejercicio106 {
                     break;
 
                 case '2':
-                    if(buscarContacto()==null){
+                    if(buscarContacto().size()==0){
                         System.out.println("El contacto buscado no existe en la agenda");
                     }
                     break;
 
                 case '3':
-                    Contactos persona=buscarContacto();
-                    if(persona==null){
+                    ArrayList persona=buscarContacto();
+                    if(persona.size()==0){
                         System.out.println("El contacto buscado no existe en la agenda");
-                    } else{
-                        listaContactos.remove(persona);
+                    }if(persona.size()==1){
+                        listaContactos.remove(persona.get(0));
+                    }else{
+                        for(int i=0;i<persona.size();i++){
+                            System.out.println(i+"- "+persona.get(i));
+                        }
+                        listaContactos.remove(persona.get(Utilidades.pedirInt("Indique el numero del contacto de la lista previa que desea borrar")));
                     }
                     break;
                 case '4':
                     System.out.println(listaContactos);
                     break;
-
             }
 
         } while(op!='0');
@@ -64,27 +68,32 @@ public class Ejercicio106 {
         return false;
     }
 
-    private static Contactos buscarContacto() {
+    private static ArrayList<Contactos> buscarContacto() {
+        ArrayList<Contactos> comunes=new ArrayList<>();
         int op=Utilidades.pedirInt("Desea buscar por Nombre pulse 1 por numero pulse 2 salir pulse 0");
         switch (op){
             case 1:
+                String nombre=Utilidades.pedirString("Introduzca Nombre a buscar");
                 for (Contactos contacto:listaContactos) {
-                        if(contacto.getNombre().equals(Utilidades.pedirString("Introduzca Nombre a buscar"))){
-                            System.out.println(contacto);
-                            return contacto;
+                        if(contacto.getNombre().equals(nombre)){
+                            comunes.add(contacto);
                         }
                     }
+                System.out.println("Los contactos con el nombre buscado son: ");
+                System.out.println(comunes);
                     break;
             case 2:
-                    for (Contactos contacto:listaContactos) {
-                        if(contacto.getNumero()==Utilidades.pedirInt("Introduzca numero a buscar")){
-                            System.out.println(contacto);
-                            return contacto;
+                int numero=Utilidades.pedirInt("introduzca numero a buscar");
+                for (Contactos contacto:listaContactos) {
+                        if(contacto.getNumero()==numero){
+                            comunes.add(contacto);
                         }
-                    }
+                }
+                System.out.println("Los contactos con el numero buscado son: ");
+                System.out.println(comunes);
                     break;
             }
-        return null;
+        return comunes;
     }
 
 
