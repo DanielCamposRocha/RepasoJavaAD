@@ -11,7 +11,7 @@ public class Main {
     }
     private static void menu() {
         char op;
-        Menu m=new Menu("Menu Principal",new String[] {"1.-Ejercicio 1 ","2.-Ejercicio 2","3.-Ejercicio 3","4.-Ejercicio 4","5.-Ejercicio 5","6.-Ejercicio 6","7.-Ejercicio 7","0.-Sair"},"01234567",Menu.Direccion.VERTICAL);
+        Menu m=new Menu("Menu Principal",new String[] {"1.-Ejercicio 1 ","2.-Ejercicio 2","3.-Ejercicio 3","4.-Ejercicio 4","5.-Ejercicio 5","6.-Ejercicio 6","7.-Ejercicio 7","8.-Ejercicio 8","0.-Sair"},"012345678",Menu.Direccion.VERTICAL);
 
         do {
             op=m.getOption();
@@ -41,6 +41,13 @@ public class Main {
                 case '7':
                     Ejercicio107.generaAlumnos();
                     Ejercicio107.notaMediaAlumno();
+                    Ejercicio107.alumnosLimpios();
+                    Ejercicio107.noMatriculas();
+                    Ejercicio107.mediaAlta();
+                    Ejercicio107.mejorAlumno();
+                    break;
+                case '8':
+
                     break;
 
             }
