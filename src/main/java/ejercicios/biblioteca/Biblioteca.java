@@ -45,6 +45,7 @@ public class Biblioteca {
                 }
                 break;
             }
+            System.out.println("El numero de referencia no existe");
         }
     }
 
@@ -60,6 +61,7 @@ public class Biblioteca {
                 System.out.println(elemento);
                 break;
             }
+            System.out.println("El numero de referencia no existe");
         }
     }
 

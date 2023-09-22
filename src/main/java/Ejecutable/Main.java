@@ -47,7 +47,7 @@ public class Main {
                     Ejercicio107.mejorAlumno();
                     break;
                 case '8':
-
+                    Ejercicio110.codigoCesar(Utilidades.pedirString("Introduzca texto"));
                     break;
                 case '9':
                     Ejercicio109.eliminarDuplicados();
